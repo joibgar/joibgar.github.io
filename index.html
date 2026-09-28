@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>joibgar</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --fondo: #f6f6fa;
+        --texto: #1a1a24;
+        --suave: #5a5a6e;
+        --linea: #dcdce6;
+        --acento: #6d4aff;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --fondo: #0d0d16;
+          --texto: #ececf4;
+          --suave: #9a9ab0;
+          --linea: #2a2a3a;
+          --acento: #a78bfa;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 48px 16px;
+        background: var(--fondo);
+        color: var(--texto);
+        font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      }
+      main {
+        max-width: 42rem;
+        margin: 0 auto;
+      }
+      h1 {
+        font-size: 1.9rem;
+        margin: 0 0 0.25em;
+      }
+      .sub {
+        color: var(--suave);
+        margin: 0 0 2.5rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+        margin: 2.5rem 0 0.5rem;
+      }
+      .juego {
+        border: 1px solid var(--linea);
+        border-radius: 12px;
+        padding: 20px 22px;
+      }
+      .juego p {
+        margin: 0.4em 0 1em;
+        color: var(--suave);
+      }
+      ul {
+        margin: 0;
+        padding-left: 1.2em;
+      }
+      li {
+        margin: 0.3em 0;
+      }
+      a {
+        color: var(--acento);
+      }
+      footer {
+        margin-top: 3rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--linea);
+        color: var(--suave);
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>joibgar</h1>
+      <p class="sub">Juegos pequeños para el navegador y para Android.</p>
+
+      <h2>Prisma: Merge Gems</h2>
+      <div class="juego">
+        <p>
+          Fusiona gemas iguales y llega a la gema prisma antes de que el tablero
+          se llene. Tres dificultades y un ranking de tus mejores partidas.
+        </p>
+        <ul>
+          <li><a href="https://joibgar.github.io/prisma-preview/">Jugar en el navegador</a></li>
+          <li>
+            <a href="https://joibgar.github.io/prisma-preview/privacy.html"
+              >Política de privacidad</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <footer>
+        Contacto: <a href="mailto:gaibjo@gmail.com">gaibjo@gmail.com</a>
+      </footer>
+    </main>
+  </body>
+</html>
