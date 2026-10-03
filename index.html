@@ -1,105 +1,110 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" data-titulo-es="joibgar · Juegos y aplicaciones" data-titulo-en="joibgar · Games and apps">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>joibgar</title>
-    <style>
-      :root {
-        color-scheme: light dark;
-        --fondo: #f6f6fa;
-        --texto: #1a1a24;
-        --suave: #5a5a6e;
-        --linea: #dcdce6;
-        --acento: #6d4aff;
-      }
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --fondo: #0d0d16;
-          --texto: #ececf4;
-          --suave: #9a9ab0;
-          --linea: #2a2a3a;
-          --acento: #a78bfa;
-        }
-      }
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        margin: 0;
-        padding: 48px 16px;
-        background: var(--fondo);
-        color: var(--texto);
-        font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      }
-      main {
-        max-width: 42rem;
-        margin: 0 auto;
-      }
-      h1 {
-        font-size: 1.9rem;
-        margin: 0 0 0.25em;
-      }
-      .sub {
-        color: var(--suave);
-        margin: 0 0 2.5rem;
-      }
-      h2 {
-        font-size: 1.2rem;
-        margin: 2.5rem 0 0.5rem;
-      }
-      .juego {
-        border: 1px solid var(--linea);
-        border-radius: 12px;
-        padding: 20px 22px;
-      }
-      .juego p {
-        margin: 0.4em 0 1em;
-        color: var(--suave);
-      }
-      ul {
-        margin: 0;
-        padding-left: 1.2em;
-      }
-      li {
-        margin: 0.3em 0;
-      }
-      a {
-        color: var(--acento);
-      }
-      footer {
-        margin-top: 3rem;
-        padding-top: 1.5rem;
-        border-top: 1px solid var(--linea);
-        color: var(--suave);
-        font-size: 0.9rem;
-      }
-    </style>
+    <title>joibgar · Juegos y aplicaciones</title>
+    <meta name="description" content="Juegos y aplicaciones para Android de joibgar. Games and apps for Android by joibgar." />
+    <link rel="stylesheet" href="assets/estilo.css" />
+    <script src="assets/idioma.js"></script>
   </head>
   <body>
     <main>
-      <h1>joibgar</h1>
-      <p class="sub">Juegos pequeños para el navegador y para Android.</p>
+      <header class="cabecera">
+        <a class="marca" href="./">joibgar</a>
+        <div class="idiomas" role="group" aria-label="Idioma / Language">
+          <button type="button" data-idioma="es">ES</button>
+          <button type="button" data-idioma="en">EN</button>
+        </div>
+      </header>
 
-      <h2>Prisma: Merge Gems</h2>
-      <div class="juego">
+      <section class="intro">
+        <h1>
+          <span lang="es">Juegos y aplicaciones</span>
+          <span lang="en">Games and apps</span>
+        </h1>
         <p>
-          Fusiona gemas iguales y llega a la gema prisma antes de que el tablero
-          se llene. Tres dificultades y un ranking de tus mejores partidas.
+          <span lang="es">Aquí enseño los juegos y aplicaciones que voy desarrollando.</span>
+          <span lang="en">This is where I show the games and apps I'm developing.</span>
         </p>
-        <ul>
-          <li><a href="https://joibgar.github.io/prisma-preview/">Jugar en el navegador</a></li>
-          <li>
-            <a href="https://joibgar.github.io/prisma-preview/privacy.html"
-              >Política de privacidad</a
-            >
-          </li>
-        </ul>
-      </div>
+      </section>
 
-      <footer>
-        Contacto: <a href="mailto:gaibjo@gmail.com">gaibjo@gmail.com</a>
-      </footer>
+      <!-- Para activar el botón de Google Play, pon la URL de la ficha en data-play-url. -->
+      <article class="juego" id="prisma" data-play-url="">
+        <div class="juego-cabecera">
+          <img src="assets/prisma/icon.png" alt="" width="64" height="64" />
+          <div>
+            <h2>Prisma: Merge Gems</h2>
+            <p class="genero"><span lang="es">Puzle</span><span lang="en">Puzzle</span></p>
+          </div>
+        </div>
+        <p>
+          <span lang="es">
+            Arrastra una gema sobre otra igual y se fusionarán en la siguiente de la colección.
+            Empiezas con cuarzo y la meta es la gema prisma, la décima, antes de que el tablero
+            se llene. Tres dificultades y tus mejores partidas guardadas.
+          </span>
+          <span lang="en">
+            Drag a gem onto a matching one and they merge into the next gem of the set. You start
+            with quartz; the goal is the prism gem, the tenth, before the board fills up. Three
+            difficulties, and your best runs are kept.
+          </span>
+        </p>
+        <div class="capturas">
+          <img src="assets/prisma/1.webp" alt="Prisma" width="540" height="1200" loading="lazy" />
+          <img src="assets/prisma/2.webp" alt="Prisma" width="540" height="1200" loading="lazy" />
+          <img src="assets/prisma/3.webp" alt="Prisma" width="540" height="1200" loading="lazy" />
+        </div>
+        <div class="enlaces">
+          <a class="boton play" aria-disabled="true" tabindex="-1">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 2.5v19l10.2-9.5L4 2.5zm11.6 10.8L6.4 21.8l12.1-6.9-2.9-1.6zm0-2.6 2.9-1.6L6.4 2.2l9.2 8.5zm4.3 2.4 2.1-1.2-2.1-1.2-3 1.2 3 1.2z"/></svg>
+            <span class="pronto"><span lang="es">Próximamente en Google Play</span><span lang="en">Coming soon to Google Play</span></span>
+            <span class="disponible"><span lang="es">Descargar en Google Play</span><span lang="en">Get it on Google Play</span></span>
+          </a>
+          <a class="boton" href="prisma/privacidad.html">
+            <span lang="es">Política de privacidad</span><span lang="en">Privacy policy</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="juego" id="sky-dash" data-play-url="">
+        <div class="juego-cabecera">
+          <img src="assets/sky-dash/icon.png" alt="" width="64" height="64" />
+          <div>
+            <h2>Sky Dash</h2>
+            <p class="genero">Arcade</p>
+          </div>
+        </div>
+        <p>
+          <span lang="es">
+            Un arcade de un solo toque bajo un cielo estrellado. Mantén el cohete en el aire, cruza
+            el hueco entre los andamios y recoge monedas para desbloquear ocho cohetes. Muerte
+            instantánea y partida nueva en menos de un segundo.
+          </span>
+          <span lang="en">
+            A one-tap arcade game under a starry sky. Keep the rocket airborne, thread the gap
+            between the scaffolds and collect coins to unlock eight rockets. Instant death, and a
+            new run in under a second.
+          </span>
+        </p>
+        <div class="capturas">
+          <img src="assets/sky-dash/1.webp" alt="Sky Dash" width="540" height="1200" loading="lazy" />
+          <img src="assets/sky-dash/2.webp" alt="Sky Dash" width="540" height="1200" loading="lazy" />
+          <img src="assets/sky-dash/3.webp" alt="Sky Dash" width="540" height="1200" loading="lazy" />
+        </div>
+        <div class="enlaces">
+          <a class="boton play" aria-disabled="true" tabindex="-1">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 2.5v19l10.2-9.5L4 2.5zm11.6 10.8L6.4 21.8l12.1-6.9-2.9-1.6zm0-2.6 2.9-1.6L6.4 2.2l9.2 8.5zm4.3 2.4 2.1-1.2-2.1-1.2-3 1.2 3 1.2z"/></svg>
+            <span class="pronto"><span lang="es">Próximamente en Google Play</span><span lang="en">Coming soon to Google Play</span></span>
+            <span class="disponible"><span lang="es">Descargar en Google Play</span><span lang="en">Get it on Google Play</span></span>
+          </a>
+          <a class="boton" href="sky-dash/privacidad.html">
+            <span lang="es">Política de privacidad</span><span lang="en">Privacy policy</span>
+          </a>
+        </div>
+      </article>
+
+      <footer>© 2026 joibgar</footer>
     </main>
   </body>
 </html>

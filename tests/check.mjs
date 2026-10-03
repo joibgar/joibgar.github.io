@@ -35,8 +35,10 @@ for (const rel of PAGINAS) {
     if (!existsSync(destino)) fallos.push(`${rel}: "${url}" no existe`);
   }
 
-  const es = (html.match(/lang="es"/g) ?? []).length;
-  const en = (html.match(/lang="en"/g) ?? []).length;
+  // El lang de <html> es el idioma inicial, no un texto traducido.
+  const cuerpo = html.replace(/<html[^>]*>/, '');
+  const es = (cuerpo.match(/lang="es"/g) ?? []).length;
+  const en = (cuerpo.match(/lang="en"/g) ?? []).length;
   if (es !== en) fallos.push(`${rel}: ${es} textos en ES y ${en} en EN`);
 }
 

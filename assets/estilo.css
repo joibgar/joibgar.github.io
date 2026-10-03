@@ -1,0 +1,225 @@
+:root {
+  color-scheme: light dark;
+  --fondo: #f5f5fa;
+  --tarjeta: #ffffff;
+  --texto: #1a1a24;
+  --suave: #5a5a6e;
+  --linea: #dcdce6;
+  --acento: #6d4aff;
+  --sobre-acento: #ffffff;
+  --sombra: 0 1px 3px rgb(20 20 40 / 0.08), 0 8px 24px rgb(20 20 40 / 0.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fondo: #0d0d16;
+    --tarjeta: #161622;
+    --texto: #ececf4;
+    --suave: #9a9ab0;
+    --linea: #2a2a3a;
+    --acento: #a78bfa;
+    --sobre-acento: #12101f;
+    --sombra: none;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+html.js[lang="es"] [lang="en"],
+html.js[lang="en"] [lang="es"] {
+  display: none !important;
+}
+body {
+  margin: 0;
+  padding: 32px 16px 48px;
+  background: var(--fondo);
+  color: var(--texto);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+main {
+  max-width: 46rem;
+  margin: 0 auto;
+}
+a {
+  color: var(--acento);
+}
+
+/* Cabecera y selector de idioma */
+.cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 2rem;
+}
+.marca {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--texto);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+.idiomas {
+  display: none;
+  border: 1px solid var(--linea);
+  border-radius: 999px;
+  padding: 2px;
+}
+html.js .idiomas {
+  display: inline-flex;
+}
+.idiomas button {
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 0;
+  border-radius: 999px;
+  padding: 4px 12px;
+  background: transparent;
+  color: var(--suave);
+  cursor: pointer;
+}
+.idiomas button[aria-pressed="true"] {
+  background: var(--acento);
+  color: var(--sobre-acento);
+}
+
+/* Escaparate */
+.intro h1 {
+  font-size: clamp(1.7rem, 5vw, 2.2rem);
+  line-height: 1.2;
+  margin: 0 0 0.5rem;
+}
+.intro p {
+  color: var(--suave);
+  margin: 0 0 2.5rem;
+  max-width: 36rem;
+}
+.juego {
+  background: var(--tarjeta);
+  border: 1px solid var(--linea);
+  border-radius: 16px;
+  box-shadow: var(--sombra);
+  padding: 20px;
+  margin-bottom: 24px;
+}
+.juego-cabecera {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.juego-cabecera img {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  flex: none;
+}
+.juego h2 {
+  font-size: 1.3rem;
+  margin: 0;
+  line-height: 1.25;
+}
+.genero {
+  color: var(--suave);
+  font-size: 0.9rem;
+  margin: 2px 0 0;
+}
+.juego > p {
+  margin: 1rem 0;
+}
+.capturas {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 8px;
+  margin: 0 -4px 1rem;
+  padding-inline: 4px;
+}
+.capturas img {
+  flex: none;
+  width: min(42vw, 180px);
+  aspect-ratio: 9 / 20;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--linea);
+  scroll-snap-align: start;
+  background: #111;
+}
+.enlaces {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.boton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 10px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: 1px solid var(--linea);
+  color: var(--texto);
+  background: transparent;
+}
+.boton.play {
+  background: var(--acento);
+  border-color: var(--acento);
+  color: var(--sobre-acento);
+}
+.boton.play[aria-disabled="true"] {
+  background: transparent;
+  border-style: dashed;
+  border-color: var(--linea);
+  color: var(--suave);
+  cursor: default;
+}
+.boton svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+
+/* Políticas */
+.politica h1 {
+  font-size: 1.6rem;
+  line-height: 1.25;
+  margin: 0 0 0.25rem;
+}
+.politica .fecha {
+  color: var(--suave);
+  margin: 0 0 1.5rem;
+}
+.politica h2 {
+  font-size: 1.1rem;
+  margin: 1.75rem 0 0.4rem;
+}
+.politica p {
+  margin: 0.4rem 0;
+}
+.politica section + section {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--linea);
+}
+html.js .politica section + section {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--linea);
+  color: var(--suave);
+  font-size: 0.85rem;
+}
+.boton.play[aria-disabled="true"] .disponible,
+.boton.play:not([aria-disabled]) .pronto {
+  display: none;
+}
