@@ -136,7 +136,8 @@ html.js .idiomas {
   margin: 0 -4px 1rem;
   padding-inline: 4px;
 }
-.capturas img {
+.capturas img,
+.capturas video {
   flex: none;
   width: min(42vw, 180px);
   aspect-ratio: 9 / 16;

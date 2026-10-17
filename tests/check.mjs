@@ -29,7 +29,7 @@ for (const rel of PAGINAS) {
     if (html.includes(prohibido)) fallos.push(`${rel}: contiene "${prohibido}"`);
   }
 
-  for (const [, url] of html.matchAll(/(?:src|href)="([^"]+)"/g)) {
+  for (const [, url] of html.matchAll(/(?:src|href|poster)="([^"]+)"/g)) {
     if (/^(https?:|#|mailto:|data:)/.test(url)) continue;
     const destino = join(raiz, dirname(rel), url.split(/[?#]/)[0]);
     if (!existsSync(destino)) fallos.push(`${rel}: "${url}" no existe`);
