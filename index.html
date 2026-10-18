@@ -7,6 +7,7 @@
     <meta name="description" content="Juegos y aplicaciones para Android de joibgar. Games and apps for Android by joibgar." />
     <link rel="stylesheet" href="assets/estilo.css" />
     <script src="assets/idioma.js"></script>
+    <script src="assets/carrusel.js" defer></script>
   </head>
   <body>
     <main>
@@ -30,7 +31,7 @@
       </section>
 
       <!-- Las capturas con texto van en pareja lang="es"/lang="en"; la de vuelo de Sky Dash, sin texto, sirve para los dos. -->
-      <!-- El botón de YouTube va en pareja lang="es"/lang="en": cada idioma enlaza a su Short. -->
+      <!-- El tráiler va en pareja lang="es"/lang="en" con su Short (data-youtube); sin JS es un enlace a YouTube. -->
       <!-- Para activar el botón de Google Play, pon la URL de la ficha en data-play-url. -->
       <article class="juego" id="prisma" data-play-url="">
         <div class="juego-cabecera">
@@ -53,30 +54,38 @@
             difficulties, and your best runs are kept.
           </span>
         </p>
-        <div class="capturas">
-          <video lang="es" src="assets/prisma/video-es.mp4" poster="assets/prisma/poster-es.jpg" width="540" height="960" controls preload="none" playsinline aria-label="Prisma: vídeo"></video>
-          <video lang="en" src="assets/prisma/video-en.mp4" poster="assets/prisma/poster-en.jpg" width="540" height="960" controls preload="none" playsinline aria-label="Prisma: video"></video>
-          <img lang="es" src="assets/prisma/1.webp" alt="Prisma" width="540" height="960" loading="lazy" />
-          <img lang="en" src="assets/prisma/en-1.webp" alt="Prisma" width="540" height="960" loading="lazy" />
-          <img lang="es" src="assets/prisma/2.webp" alt="Prisma" width="540" height="960" loading="lazy" />
-          <img lang="en" src="assets/prisma/en-2.webp" alt="Prisma" width="540" height="960" loading="lazy" />
-          <img lang="es" src="assets/prisma/3.webp" alt="Prisma" width="540" height="960" loading="lazy" />
-          <img lang="en" src="assets/prisma/en-3.webp" alt="Prisma" width="540" height="960" loading="lazy" />
-          <img lang="es" src="assets/prisma/4.webp" alt="Prisma" width="540" height="960" loading="lazy" />
-          <img lang="en" src="assets/prisma/en-4.webp" alt="Prisma" width="540" height="960" loading="lazy" />
+        <div class="bloque">
+          <p class="etiqueta"><span lang="es">Tráiler</span><span lang="en">Trailer</span></p>
+          <a class="video" lang="es" data-youtube="ESz_oCSh-J0" href="https://youtube.com/shorts/ESz_oCSh-J0" target="_blank" rel="noopener" aria-label="Reproducir el tráiler de Prisma">
+            <img src="assets/prisma/poster-es.jpg" alt="" width="540" height="960" loading="lazy" /><span class="play" aria-hidden="true"></span>
+          </a>
+          <a class="video" lang="en" data-youtube="C8aDCLIHI9c" href="https://youtube.com/shorts/C8aDCLIHI9c" target="_blank" rel="noopener" aria-label="Play the Prisma trailer">
+            <img src="assets/prisma/poster-en.jpg" alt="" width="540" height="960" loading="lazy" /><span class="play" aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="bloque">
+          <p class="etiqueta"><span lang="es">Capturas</span><span lang="en">Screenshots</span></p>
+          <div class="carrusel">
+            <div class="pista">
+              <a class="captura" lang="es" href="assets/prisma/1.webp"><img src="assets/prisma/1.webp" alt="Prisma" width="540" height="960" loading="lazy" /></a>
+              <a class="captura" lang="en" href="assets/prisma/en-1.webp"><img src="assets/prisma/en-1.webp" alt="Prisma" width="540" height="960" loading="lazy" /></a>
+              <a class="captura" lang="es" href="assets/prisma/2.webp"><img src="assets/prisma/2.webp" alt="Prisma" width="540" height="960" loading="lazy" /></a>
+              <a class="captura" lang="en" href="assets/prisma/en-2.webp"><img src="assets/prisma/en-2.webp" alt="Prisma" width="540" height="960" loading="lazy" /></a>
+              <a class="captura" lang="es" href="assets/prisma/3.webp"><img src="assets/prisma/3.webp" alt="Prisma" width="540" height="960" loading="lazy" /></a>
+              <a class="captura" lang="en" href="assets/prisma/en-3.webp"><img src="assets/prisma/en-3.webp" alt="Prisma" width="540" height="960" loading="lazy" /></a>
+              <a class="captura" lang="es" href="assets/prisma/4.webp"><img src="assets/prisma/4.webp" alt="Prisma" width="540" height="960" loading="lazy" /></a>
+              <a class="captura" lang="en" href="assets/prisma/en-4.webp"><img src="assets/prisma/en-4.webp" alt="Prisma" width="540" height="960" loading="lazy" /></a>
+            </div>
+          </div>
         </div>
         <div class="enlaces">
           <a class="boton play" href="https://play.google.com/store/apps/details?id=es.jibanez.prisma" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 2.5v19l10.2-9.5L4 2.5zm11.6 10.8L6.4 21.8l12.1-6.9-2.9-1.6zm0-2.6 2.9-1.6L6.4 2.2l9.2 8.5zm4.3 2.4 2.1-1.2-2.1-1.2-3 1.2 3 1.2z"/></svg>
             <span class="disponible"><span lang="es">Descargar en Google Play</span><span lang="en">Get it on Google Play</span></span>
           </a>
-          <a class="boton" lang="es" href="https://youtube.com/shorts/ESz_oCSh-J0" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
-            Ver en YouTube
-          </a>
-          <a class="boton" lang="en" href="https://youtube.com/shorts/C8aDCLIHI9c" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
-            Watch on YouTube
+          <a class="boton" href="https://joibgar.itch.io/prisma-merge-gems" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 7h10a5 5 0 0 1 4.9 6l-.8 4a3 3 0 0 1-5.2 1.4L14.2 16H9.8l-1.7 2.4A3 3 0 0 1 2.9 17l-.8-4A5 5 0 0 1 7 7zm1 3v1.5H6.5v1.5H8v1.5h1.5V13H11v-1.5H9.5V10H8zm7.5 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm2.5 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/></svg>
+            itch.io
           </a>
           <a class="boton" href="prisma/privacidad.html">
             <span lang="es">Política de privacidad</span><span lang="en">Privacy policy</span>
@@ -105,29 +114,37 @@
             new run in under a second.
           </span>
         </p>
-        <div class="capturas">
-          <video lang="es" src="assets/sky-dash/video-es.mp4" poster="assets/sky-dash/poster-es.jpg" width="540" height="960" controls preload="none" playsinline aria-label="Sky Dash: vídeo"></video>
-          <video lang="en" src="assets/sky-dash/video-en.mp4" poster="assets/sky-dash/poster-en.jpg" width="540" height="960" controls preload="none" playsinline aria-label="Sky Dash: video"></video>
-          <img src="assets/sky-dash/1.webp" alt="Sky Dash" width="540" height="960" loading="lazy" />
-          <img lang="es" src="assets/sky-dash/2.webp" alt="Sky Dash" width="540" height="960" loading="lazy" />
-          <img lang="en" src="assets/sky-dash/en-2.webp" alt="Sky Dash" width="540" height="960" loading="lazy" />
-          <img lang="es" src="assets/sky-dash/3.webp" alt="Sky Dash" width="540" height="960" loading="lazy" />
-          <img lang="en" src="assets/sky-dash/en-3.webp" alt="Sky Dash" width="540" height="960" loading="lazy" />
-          <img lang="es" src="assets/sky-dash/4.webp" alt="Sky Dash" width="540" height="960" loading="lazy" />
-          <img lang="en" src="assets/sky-dash/en-4.webp" alt="Sky Dash" width="540" height="960" loading="lazy" />
+        <div class="bloque">
+          <p class="etiqueta"><span lang="es">Tráiler</span><span lang="en">Trailer</span></p>
+          <a class="video" lang="es" data-youtube="ktElonEyY0Q" href="https://youtube.com/shorts/ktElonEyY0Q" target="_blank" rel="noopener" aria-label="Reproducir el tráiler de Sky Dash">
+            <img src="assets/sky-dash/poster-es.jpg" alt="" width="540" height="960" loading="lazy" /><span class="play" aria-hidden="true"></span>
+          </a>
+          <a class="video" lang="en" data-youtube="gqMdYwdChzI" href="https://youtube.com/shorts/gqMdYwdChzI" target="_blank" rel="noopener" aria-label="Play the Sky Dash trailer">
+            <img src="assets/sky-dash/poster-en.jpg" alt="" width="540" height="960" loading="lazy" /><span class="play" aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="bloque">
+          <p class="etiqueta"><span lang="es">Capturas</span><span lang="en">Screenshots</span></p>
+          <div class="carrusel">
+            <div class="pista">
+              <a class="captura" href="assets/sky-dash/1.webp"><img src="assets/sky-dash/1.webp" alt="Sky Dash" width="540" height="960" loading="lazy" /></a>
+              <a class="captura" lang="es" href="assets/sky-dash/2.webp"><img src="assets/sky-dash/2.webp" alt="Sky Dash" width="540" height="960" loading="lazy" /></a>
+              <a class="captura" lang="en" href="assets/sky-dash/en-2.webp"><img src="assets/sky-dash/en-2.webp" alt="Sky Dash" width="540" height="960" loading="lazy" /></a>
+              <a class="captura" lang="es" href="assets/sky-dash/3.webp"><img src="assets/sky-dash/3.webp" alt="Sky Dash" width="540" height="960" loading="lazy" /></a>
+              <a class="captura" lang="en" href="assets/sky-dash/en-3.webp"><img src="assets/sky-dash/en-3.webp" alt="Sky Dash" width="540" height="960" loading="lazy" /></a>
+              <a class="captura" lang="es" href="assets/sky-dash/4.webp"><img src="assets/sky-dash/4.webp" alt="Sky Dash" width="540" height="960" loading="lazy" /></a>
+              <a class="captura" lang="en" href="assets/sky-dash/en-4.webp"><img src="assets/sky-dash/en-4.webp" alt="Sky Dash" width="540" height="960" loading="lazy" /></a>
+            </div>
+          </div>
         </div>
         <div class="enlaces">
           <a class="boton play" href="https://play.google.com/store/apps/details?id=es.jibanez.skydash" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 2.5v19l10.2-9.5L4 2.5zm11.6 10.8L6.4 21.8l12.1-6.9-2.9-1.6zm0-2.6 2.9-1.6L6.4 2.2l9.2 8.5zm4.3 2.4 2.1-1.2-2.1-1.2-3 1.2 3 1.2z"/></svg>
             <span class="disponible"><span lang="es">Descargar en Google Play</span><span lang="en">Get it on Google Play</span></span>
           </a>
-          <a class="boton" lang="es" href="https://youtube.com/shorts/ktElonEyY0Q" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
-            Ver en YouTube
-          </a>
-          <a class="boton" lang="en" href="https://youtube.com/shorts/gqMdYwdChzI" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
-            Watch on YouTube
+          <a class="boton" href="https://joibgar.itch.io/sky-dash" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 7h10a5 5 0 0 1 4.9 6l-.8 4a3 3 0 0 1-5.2 1.4L14.2 16H9.8l-1.7 2.4A3 3 0 0 1 2.9 17l-.8-4A5 5 0 0 1 7 7zm1 3v1.5H6.5v1.5H8v1.5h1.5V13H11v-1.5H9.5V10H8zm7.5 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm2.5 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/></svg>
+            itch.io
           </a>
           <a class="boton" href="sky-dash/privacidad.html">
             <span lang="es">Política de privacidad</span><span lang="en">Privacy policy</span>

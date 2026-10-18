@@ -54,6 +54,10 @@ if (index !== null) {
   JUEGOS.forEach((juego, i) => {
     const t = tarjetas[i] ?? '';
     if (!t.includes('data-play-url=')) fallos.push(`tarjeta ${juego}: sin data-play-url`);
+    if (!t.includes('href="https://joibgar.itch.io/')) fallos.push(`tarjeta ${juego}: sin enlace a itch.io`);
+    if (!/class="video" lang="es" data-youtube="[\w-]{11}"/.test(t) || !/class="video" lang="en" data-youtube="[\w-]{11}"/.test(t)) {
+      fallos.push(`tarjeta ${juego}: falta el tráiler de YouTube en ES o EN`);
+    }
     if (!t.includes(`href="${juego}/privacidad.html"`)) {
       fallos.push(`tarjeta ${juego}: sin enlace a ${juego}/privacidad.html`);
     }

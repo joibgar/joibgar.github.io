@@ -22,9 +22,6 @@
     for (var i = 0; i < botones.length; i++) {
       botones[i].setAttribute('aria-pressed', String(botones[i].dataset.idioma === idioma));
     }
-    // Un vídeo del otro idioma queda oculto: que no siga sonando.
-    var videos = document.querySelectorAll('video');
-    for (var v = 0; v < videos.length; v++) videos[v].pause();
     var titulo = raiz.dataset['titulo' + (idioma === 'es' ? 'Es' : 'En')];
     if (titulo) document.title = titulo;
   }
